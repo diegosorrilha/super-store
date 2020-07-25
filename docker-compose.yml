@@ -1,5 +1,16 @@
 version: '3.5'
 services:
+  web:
+    build:
+      context: ./web/
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+        NAME: "API SUPER STORE"
+    networks:
+      - webnet
+
   api:
     build:
       context: ./api/
