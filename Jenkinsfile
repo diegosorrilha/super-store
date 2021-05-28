@@ -1,19 +1,12 @@
 pipeline {
-  agent {
-    docker {
-      image 'rbekker87/build-tools:latest'
-    }
+  agent none
 
   }
   stages {
     stage('test') {
       steps {
-        sh 'echo $(hostname) > /tmp/hostname.txt'
-        sh 'cat /tmp/hostname.txt'
+        sh 'echo VAI'
       }
     }
-  }
-  environment {
-    Owner = 'Ruan'
   }
 }
